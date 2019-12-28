@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang=en>
+    <head>
+        <title>sample twitter stats app</title>
+        <meta charset='utf-8'>
+        <script src="userinfo.js"></script>
+    </head>
+    <body>
+        <h1> Welcome Friend, </h1>
+        <h2> {{.Username}} </h2>
+
+        <section id="quick stats">
+            <h3> Your Quick Follower Stats </h3>
+            <div id="followers" class="follower-stats">
+                <p> {{.Followers}}</p>
+                <p> Followers </p>
+            </div>
+            <div id="following" class="follower-stats">
+                <p> {{.Following}}</p>
+                <p> Following </p>
+            </div>
+        </section>
+
+        <section id=non-followers>
+            <h3> Your Non-Follower Stats </h3>
+            <div id="non-followers">
+                <table>
+                    <tr>
+                        <th>Verified</th>
+                        <th>Last Tweeted</th>
+                        <th>Ditch?</th>
+                    </tr>
+                    <!-- here add for loop for all verfied non followers (sorted by date of last tweet)-->
+                    <tr classname="verified-non-followers">
+                        <td> RENDER Twittername </td>
+                        <td> RENDER Date of tweet </td>
+                        <td> <button a href="#"> unfollow </button><!-- here add POST request to unfoollow--></td>
+                    </tr>
+
+                    <tr classname="non-verified-non-followers">
+                        <th>Non-Verified</th>
+                        <th>Last Tweeted</th>
+                        <th>Ditch?</th>
+                    </tr>
+                    <!-- here add for loop for all non-verfied non followers (sorted by date of last tweet)-->
+                    <tr classname="verified-non-followers">
+                        <td> RENDER Twittername </td>
+                        <td> RENDER Date of tweet </td>
+                        <td> <button a href="#"> unfollow </button><!-- here add POST request to unfoollow--></td>
+                    </tr>
+
+                </table>
+                <p> Followers </p>
+            </div>
+            <div id="following" class="follower-stats">
+                <p> RENDER # of</p>
+                <p> Following </p>
+            </div>
+        </section>
+
+
+    </body>
+</html>
